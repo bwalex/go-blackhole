@@ -1,0 +1,53 @@
+{
+	"ImportPath": "github.com/bwalex/go-blackhole",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v74",
+	"Packages": [
+		"github.com/coreos/go-systemd/sdjournal",
+		"github.com/mattn/go-sqlite3",
+		"github.com/vishvananda/netlink"
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/coreos/go-systemd/journal",
+			"Comment": "v14-11-g7c95333",
+			"Rev": "7c9533367ef925dc1078d75e5b7141e10da2c4e8"
+		},
+		{
+			"ImportPath": "github.com/coreos/go-systemd/sdjournal",
+			"Comment": "v14-11-g7c95333",
+			"Rev": "7c9533367ef925dc1078d75e5b7141e10da2c4e8"
+		},
+		{
+			"ImportPath": "github.com/coreos/pkg/dlopen",
+			"Comment": "v3-2-g447b7ec",
+			"Rev": "447b7ec906e523386d9c53be15b55a8ae86ea944"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-sqlite3",
+			"Comment": "v1.2.0-10-g2d44dec",
+			"Rev": "2d44decb4941c9cdf72c22297b7890faf7da9bcb"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-sqlite3/sqlite3_test",
+			"Comment": "v1.2.0-10-g2d44dec",
+			"Rev": "2d44decb4941c9cdf72c22297b7890faf7da9bcb"
+		},
+		{
+			"ImportPath": "github.com/vishvananda/netlink",
+			"Rev": "13fb20a9787c14bfc4c7996ce27d7224aa815812"
+		},
+		{
+			"ImportPath": "github.com/vishvananda/netlink/nl",
+			"Rev": "13fb20a9787c14bfc4c7996ce27d7224aa815812"
+		},
+		{
+			"ImportPath": "github.com/vishvananda/netns",
+			"Rev": "2c9454e4fc6e2edc1a1c84e64ed3d6e662fb6991"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "c2528b2dd8352441850638a8bb678c2ad056fd3e"
+		}
+	]
+}
