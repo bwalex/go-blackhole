@@ -33,6 +33,7 @@ var globalState = struct {
 	journalChan:       make(chan string, 10),
 	exprs:             []*regexp.Regexp{
 		regexp.MustCompile(`Failed (?:password|publickey) for (?:invalid user )?[^\s]+ from ([^\s]+) port`),
+		// regexp.MustCompile(`Invalid user [^\s]+ from ([^\s]+)`),
 	},
 	db:                nil,
 	ipv4PrefixLen:     ipv4PrefixDefault,
