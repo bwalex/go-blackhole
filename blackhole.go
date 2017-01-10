@@ -150,7 +150,7 @@ func processTick() {
 		log.Printf("INFO: Expiring ban for ip=%s", ip)
 
 		err = removeBlackholeRoute(net.ParseIP(ip))
-		if err != nil {
+		if err != nil && err != syscall.ESRCH {
 			log.Printf("ERR:  route(del): %s", err)
 			continue
 		}
