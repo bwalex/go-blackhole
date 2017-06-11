@@ -1,0 +1,52 @@
+kind: DaemonSet
+apiVersion: extensions/v1beta1
+metadata:
+  labels:
+    component: blackhole
+    app: blackhole
+    name: blackhole
+    tier: node
+  name: blackhole
+spec:
+  selector:
+    matchLabels:
+      component: blackhole
+      app: blackhole
+      name: blackhole
+      tier: node
+  template:
+    metadata:
+      labels:
+        component: blackhole
+        app: blackhole
+        name: blackhole
+        tier: node
+
+    spec:
+      hostNetwork: true
+      containers:
+        - name: blackhole
+          image: bwalex/go-blackhole:0.2
+          command:
+            - -blacklist-duration=1h
+            - -db=/var/lib/blackhole/blackhole.db
+            - -journal-path=/var/log/journal
+            - -ipv4-prefix=32
+            - -ipv6-prefix=64
+          volumeMounts:
+            - mountPath: /var/log/journal
+              name: journal
+              readOnly: true
+            - mountPath: /var/lib/blackhole
+              name: db
+              readOnly: false
+          securityContext:
+            privileged: true
+
+      volumes:
+        - name: journal
+          hostPath:
+            path: /var/log/journal
+        - name: db
+          hostPath:
+            path: /var/lib

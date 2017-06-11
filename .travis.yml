@@ -1,0 +1,10 @@
+language: go
+go: 1.7
+script: make
+deploy:
+  provider: releases
+  api_key:
+    secure: Voaf0eLqM3p0xGyz+gcZnnqdpe+06Z0UEU0gzoU42ju/VnS6BoZukezRIkr8mNKyy38mIsv8mYS6ZmRGxlcdZ8kmTr6jQBtYNkb3Wjgj6nST0l1bFqzWQpEGdQI+CWdo3/FiSJEcdprHLSR+uv1yHVenQm8LMC+hgtb2wodR2XYhBisvwRtbjDVmIKbBOTY8PHxZYgiJZLY2niR356J4hh34qgXQDKv42o08fMhJ/rhktxlQceRMWVU/O1Lbk/C+zQrCBINVnd//sTZ+zCC/3/1NPfcXekiR5R+2ydcaTYCivNQYnTni/+nsLVEhBSuzaLHaeIjV1K40gfZcdp/ypxgwObjBrhvstXD2lNrlryQ4suFoBngUW66iy6Ldq8F8PW7N0uhm5jszZBoY1LJS4ZO5/2uGOXCYb2R8deqzKH6SUjFdkDhtKtx9Cgrte4/wmmhfoAKO+5+LRfF1Z+E6NqXwi4w4LIZvL57MVX8/mX40XyxVN/xdcbb3fSxRO6bxMlvGF6mPH7J4+gSITOzgLXhWqDAlarb5JFBU8i0jniVUtGKEAsmOfqKZtkF+yl/wSrEvLRXmWjZBeJNftMcrI282P/YpCWkF76Ocmr1yqRGtQWBAtdzuJ/ZP6r612tMxcL/vv642fSSfMePTWNFH9cpYulivQIsBtFYxeG3cSrY=
+  file: dist/go-blackhole
+  on:
+    tags: true
