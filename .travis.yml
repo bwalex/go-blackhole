@@ -5,7 +5,7 @@ go: 1.7
 script: make
 before_install:
   - sudo apt-get update -qq
-  - sudo apt-get install -qq libsystemd-dev
+  - sudo apt-get install -qq libsystemd-journal-dev
 deploy:
   provider: releases
   api_key:
