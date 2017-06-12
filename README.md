@@ -8,7 +8,7 @@ go-blackhole watches the systemd journal for failed SSH login/authentication att
 
 Release binaries for linux amd64 platforms are built by default and can be downloaded from the [Releases page](https://github.com/bwalex/go-blackhole/releases).
 
-A Docker image is also available: [bwalex/go-blackhole](https://hub.docker.com/r/bwalex/go-blackhole/).
+A Docker image is also available: [bwalex/go-blackhole](https://hub.docker.com/r/bwalex/go-blackhole/). Check out [example/k8s-blackhole.yaml](example/k8s-blackhole.yaml) for a usage example as a Kubernetes DaemonSet.
 
 For other platforms or to build from source, clone the repository and just run `make`.
 
