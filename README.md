@@ -25,3 +25,8 @@ For other platforms or to build from source, clone the repository and just run `
         	IPv6 prefix length to blacklist (default 64)
       -journal-path string
         	systemd journal path (default "/var/log/journal")
+
+
+## License
+
+go-blackhole is released under the [MIT License](http://www.opensource.org/licenses/MIT).
